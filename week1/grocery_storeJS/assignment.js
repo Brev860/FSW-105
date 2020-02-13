@@ -8,6 +8,7 @@ var guestShopper = {
   city: "Hartford",
   zipeCode: 06016,
   stateProvence: "CT",
+  postOfficeBox: false,
   groceryCart: ["apples", "oranges", "milk", "eggs", "butter", "cheese", "bread"],
 
 };

@@ -5,10 +5,6 @@ function returnSum(num1, num2){
 
 /* largest of 3 num*/
 
-function largestOfNum(num1, num2, num3){
-
-}
-
 function largest(a, b, c, d) {
     return Math.max.apply(null, [a, b, c, d]);
   }
@@ -25,7 +21,7 @@ function largest(a, b, c, d) {
   } console.log(evenOrOdd(5))
 
 
-   /* string lenght  */ 
+   /* string length  */ 
 
    function myFunction() {
     var str = "Hello World!";

@@ -1,45 +1,75 @@
 
 
- if(5>3){
-    console.log("Is greater than")
-}
+var x = 5
+var y = 3
 
- if("cat" == 3) {
-    console.log("Is the length")
- }else{
-      console.log("nah son")
-   
+function greaterThan(){
+    if(x>y){
+        return "Is greater than"
+    }
 }
+  
+    console.log(greaterThan())
+
+
+function returnLength(){
+var x = "cat"
+    if(x.length == 2){   
+
+        return "length is 2 characters long"
+ }else{
+     return "3 is the length"
+ } 
+}  console.log(returnLength());
+
 
 
 var person = {
     name: "Bobbby",
-    age: 19,
+    age: 12,
 }
+
+function firstInitial(){
 
 if(person.name.startsWith("B")) {
-    console.log("can go to the moves")
+    return "can go to the movies"
+}else {
+    return "cant go to the movies"
 }
+}console.log(firstInitial())
 
-if(person.age > 18) {
-    console.log("can go to movies")
+var person = {
+    name: "Bobbby",
+    age: 12,
+}
+function ageRestriction(){
+if(person.age >= 18) {
+    return person.name + " is old enough for the movie"
 } else{
-    console.log("cant go into movies")
+    return person.name + " is too young to attend movie"
 }
+}console.log(ageRestriction())
 
-if(person.name.startsWith("B") || person.age > 18) {
-    console.log("can go to movie")
+function agePlusName(){
+if(person.name.startsWith("B") && person.age >= 18) {
+     return person.name + " can attend this movie"
 } else{
-    console.log("can't go to movie")
+    return person.name + " cant attend this movie"
 }
+}console.log(agePlusName())
 
+function compareNum(){
 if(1 === "1"){
-    console.log("strict")
+    return "strictly"
 } else{
-    console.log("loose")
+    return "loose"
 }
+} console.log(compareNum())
+
+function compareNum2(){
 if(1 <= 2 && 2 === 4){
-    console.log("yes")
+    return "yes"
 } else {
-    console.log("no")
+    return "no"
 }
+}console.log(compareNum2())

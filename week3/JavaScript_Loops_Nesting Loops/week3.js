@@ -7,9 +7,9 @@ function countItem(officeItems, itemToSearch)
     var numItems = 0;
     for(i=0; i < officeItems.length; i++)
     {
-        if (officeItems[i] -- itemToSearch)
+        if (officeItems[i] == itemToSearch)
         {
-            numItems +- 1;
+            numItems += 1;
         }
     }
   console.log(itemToSearch + " appears " + numItems + " times in this array");
@@ -57,7 +57,7 @@ if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18  &&  peopleWhoWantToSeeMadMaxFu
     console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough" + " she cannot see this movie")
 }
 }
-/* even odd */
+/* even odd 
 for (var i=0; i<=101; i++) {
     if (i === 0) {
             console.log(i +  " is even");
@@ -68,4 +68,4 @@ for (var i=0; i<=101; i++) {
     else {
             console.log(i + " is odd");
     }
-} 
+} */

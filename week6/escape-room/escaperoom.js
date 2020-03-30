@@ -38,11 +38,11 @@ while(playerAlive == true && playerHandStuck == false && foundKey == false && lo
 
  while(playerHandStuck == true && playerAlive == true){
     const alternativeOption = readlineSync.keyIn(`You have two options:\n 1. Give up(select 1) \n 2. Cut off hand and keep locking for key (select 2)` , {limit: `$<1-2>`})
- if (alternativeOption == 1){
+ if (alternativeOption == 2){
          console.log(`Oh noooo!!!! \n ${playerName} you've bled out before you could cauterize your wound. \n GAME OVER(Wan wan waaaannn!!)`);
          playerAlive = false;
          locateKeyOptions == false;
- } else if (alternativeOption == 2 ){
+ } else if (alternativeOption == 1 ){
       console.log(`Wow ${playerName}....looks like you're stuck here....GAME OVER!!!`);
       playerAlive = false;
       locateKeyOptions == false

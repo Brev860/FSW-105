@@ -5,19 +5,21 @@ function empolyee (name, title, salary, status) {
     this.title = title
     this.salary = salary
     this.status = "Full Time"
-    this.form = function printEmployeeForm(){
-            return this;
-        };
-    employees.push(this) 
+    this.printEmployeeForm = function(){
+        console.log(this.name ;
     
+};
+
+let bob = new empolyee("Bob", "engineer", 80,000);
+bob.printEmployeeForm()
+// let jim = new empolyee("jim", "customer service", 30,000)
+// console.log(bob.printEmployeeForm())
+// let tom = new empolyee("tim", "project manager", 120,000)
+// console.log(bob.printEmployeeForm())
+// let don = new empolyee("don", "auditor", 60,000)
+// console.log(bob.printEmployeeForm())
+// let mac = new empolyee("mac", "manager", 900,000)
+// console.log(bob.printEmployeeForm())
+// console.log(printEmployeeForm())
+
 }
-
-let bob = new empolyee("Bob", "engineer", 80,000)
-let jim = new empolyee("jim", "customer service", 30,000)
-let tom = new empolyee("tim", "project manager", 120,000)
-let don = new empolyee("don", "auditor", 60,000)
-let mac = new empolyee("mac", "manager", 900,000)
-
-console.log(employees)
-
-

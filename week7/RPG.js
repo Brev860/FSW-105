@@ -1,9 +1,9 @@
 const readlineSync = require(`readline-sync`);
 let warriorsHealth = 20;
 let userDead = false
-const choices = ["Walk", "Print", "Quit", "Exit"];
+const choices = ["Walk", "Print", "Quit"];
 
-const rivalGangsStreet = ["Lords", "Savage Nomads", "Ghetto Brothers", "Savage Spades", "Hawks"];
+
 const rivalGangsSubway = ["Rollers", "Get Fresh Crew", "Harlem Kings", "Sewer Kids", "Whalers"];
 
 const weapons = ["Baseball Bat", "Chains","Gun", "switch blade"];
@@ -30,7 +30,7 @@ const intro = readlineSync.question(`See ${playerName} I dont know how you got h
      let fight = false;
     const gate = Math.random() * 4;
     
-    const choices2 = ["Fight", "Run", "Quit"]
+    const choices2 = ["Fight", "Run","Print", "Quit"]
     
     
     const action = readlineSync.keyInSelect(choices, 'What action will you take?')
@@ -46,6 +46,12 @@ const intro = readlineSync.question(`See ${playerName} I dont know how you got h
             userDead = false
            gotAway = true
                
+        }else if(choices[action] == "Print") {
+            console.log(`Name: ` + playerName + `Health: `+ warriorsHealth + `, Weapons: `+ grabWeapon)
+            userDead = false
+            fight = true
+        } else if(choices[action] == "Quit"){
+           userDead = true
         };
            
         
@@ -77,7 +83,13 @@ const intro = readlineSync.question(`See ${playerName} I dont know how you got h
                         proceed = true
                         rivalGangsHealth = 0
                         userDead = false
-                      };
+                      }else if(choices[action] == "Print") {
+                        console.log(`Name: ` + playerName + `Health: `+ warriorsHealth + `, Weapons: `+ grabWeapon)
+                        userDead = false
+                        fight = true
+                    } else if(choices[action] == "Quit"){
+                       userDead = true
+                    };
                       
                       while(rivalGangsHealth <=0 && warriorsHealth > 0 && userDead == false && checkPoint1 == true && gotAway == false){
                         const wonFight = readlineSync.question(`You defeated `+ rivalSubway + `. Proceed with your journey [Press Enter]`)
@@ -154,7 +166,13 @@ const intro = readlineSync.question(`See ${playerName} I dont know how you got h
                            checkPoint2A = false
                            checkPoint4 = true
                            }
-                        };
+                           else if(choices[action] == "Print") {
+                          console.log(`Name: ` + playerName + `Health: `+ warriorsHealth + `, Weapons: `+ grabWeapon)
+                          userDead = false
+                          fight = true
+                      } else if(choices[action] == "Quit"){
+                         userDead = true
+                      };
                            while(checkPoint2 == false && warriorsHealth > 0 && userDead == false && checkPoint2A == true){
                             const action2 = readlineSync.keyInSelect(choices2, 'Will you keep fighting or run? [enter "1"} to keep fighting, or [enter "2"] to run')
                      
@@ -186,15 +204,22 @@ const intro = readlineSync.question(`See ${playerName} I dont know how you got h
                                        checkPoint4= true
                                        checkPoint3 = false
                     
-                                       }
-                                    }    
+                                       }else if(choices[action] == "Print") {
+                                        console.log(`Name: ` + playerName + `Health: `+ warriorsHealth + `, Weapons: `+ grabWeapon)
+                                        userDead = false
+                                        fight = true
+                                    } else if(choices[action] == "Quit"){
+                                       userDead = true
+                                    }
+                                    };  
                            
                            while(rivalGangsHealth <=0 && warriorsHealth > 0 && proceed == true && checkPoint3 == true && userDead == false){
                                 const wonFight = readlineSync.question(`You defeated `+ rivalSubway + `. Proceed with your journey [Press Enter]`)
-                                checkPoint1 = true
+                                checkPoint4 = true
                                 proceed = true
                                 userDead = false
                                 gotAway = true
+                                checkPoint3 = false
                              if(warriorsHealth <=0 && rivalGangsHealth <=0 && proceed == true && checkPoint3 == true && userDead == false){
                                 console.log(`You were defeated by the ` + rivalSubway + ` GAMEOVER!!!!!`)
                                 userDead = true
@@ -237,9 +262,15 @@ const intro = readlineSync.question(`See ${playerName} I dont know how you got h
                                     checkPoint5= true
                                     checkPoint3 = false
                  
-                                    };
+                                    }else if(choices[action] == "Print") {
+                                      console.log(`Name: ` + playerName + `Health: `+ warriorsHealth + `, Weapons: `+ grabWeapon)
+                                      userDead = false
+                                      fight = true
+                                  } else if(choices[action] == "Quit"){
+                                     userDead = true
+                                  };
                                 
-                        
+                                }
                         while(proceed == true && checkPoint5 == true && userDead == false){
 
                          if(warriorsHealth > 0 && rivalGangsHealth <= 0){
@@ -251,6 +282,7 @@ const intro = readlineSync.question(`See ${playerName} I dont know how you got h
                          }
                      };
                              
-                         };
+                         
+                        };
                         
                         
